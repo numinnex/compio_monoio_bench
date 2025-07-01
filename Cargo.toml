@@ -1,0 +1,18 @@
+[package]
+name = "compio_monoio_bench"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+compio = { version = "0.15.0", features = ["default", "macros", "dispatcher"] }
+futures-util = { version = "0.3.31" }
+monoio = "0.2.4"
+core_affinity = "0.8"
+
+
+[dev-dependencies]
+
+[[bench]]
+name = "collection_benchmark"
+path = "src/benches/collection_benchmark.rs"
+harness = false
